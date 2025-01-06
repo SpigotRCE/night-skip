@@ -3,7 +3,7 @@ package me.kodysimpson.nightskip.tasks;
 import me.kodysimpson.nightskip.managers.VoteManager;
 import org.bukkit.Bukkit;
 
-public class TimeCheckTask implements Runnable{
+public class TimeCheckTask implements Runnable {
 
     private final VoteManager voteManager;
 

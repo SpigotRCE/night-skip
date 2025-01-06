@@ -6,4 +6,4 @@ commands:
   vote:
     description: Vote to keep it day or let night continue
     usage: /<command> <yes|no>
-    aliases: [v]
+    aliases: [ v ]

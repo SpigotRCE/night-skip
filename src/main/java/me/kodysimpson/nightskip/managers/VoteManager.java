@@ -24,7 +24,7 @@ public class VoteManager {
         this.plugin = plugin;
     }
 
-    public void startVote(){
+    public void startVote() {
         if (this.voteActive) return;
         votes.clear();
         voteActive = true;
