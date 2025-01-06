@@ -16,7 +16,7 @@ public class TimeCheckTask implements Runnable {
         for (var world : Bukkit.getWorlds()) {
             long time = world.getTime();
 
-            if (time >= 12000L && time <= 12100L && !voteManager.isVoteActive()) {
+            if (time >= 12000L && time <= 12100L) {
                 voteManager.startVote();
                 break;
             }
