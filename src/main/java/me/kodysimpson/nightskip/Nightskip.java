@@ -17,7 +17,7 @@ public final class Nightskip extends JavaPlugin {
         // Plugin startup logic
         this.voteManager = new VoteManager(this);
 
-        getCommand("vote").setExecutor(new VoteCommand(this.voteManager));
+        getCommand("nvote").setExecutor(new VoteCommand(this.voteManager));
 
         this.timeCheckTask = Bukkit.getScheduler().runTaskTimer(this,
                 new TimeCheckTask(this.voteManager), 0L, 20L);

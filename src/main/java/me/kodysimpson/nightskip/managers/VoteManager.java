@@ -34,13 +34,13 @@ public class VoteManager {
 
         // Create YES vote button
         TextComponent yesButton = new TextComponent(ChatColor.GREEN + "[YES] ");
-        yesButton.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/vote yes"));
+        yesButton.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/nvote yes"));
         yesButton.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
                 new Text("Click to vote for keeping it day")));
 
         // Create NO vote button
         TextComponent noButton = new TextComponent(ChatColor.RED + "[NO]");
-        noButton.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/vote no"));
+        noButton.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/nvote no"));
         noButton.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
                 new Text("Click to vote for letting night continue")));
 

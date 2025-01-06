@@ -3,10 +3,10 @@ version: '1.0'
 main: me.kodysimpson.nightskip.Nightskip
 api-version: '1.21'
 commands:
-  vote:
+  nvote:
     description: Vote to keep it day or let night continue
     usage: /<command> <yes|no>
-    aliases: [ v ]
+    aliases: [ nv ]
 permissions:
   nightskip.spy:
     description: Allows users to spy on other players
