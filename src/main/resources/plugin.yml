@@ -7,3 +7,7 @@ commands:
     description: Vote to keep it day or let night continue
     usage: /<command> <yes|no>
     aliases: [ v ]
+permissions:
+  nightskip.spy:
+    description: Allows users to spy on other players
+    default: op

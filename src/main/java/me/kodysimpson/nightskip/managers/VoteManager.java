@@ -56,7 +56,7 @@ public class VoteManager {
         if (isVoteActive()) {
             votes.put(uuid, vote);
             String voteMessage = vote ? ChatColor.GREEN + "voted to keep it day" : ChatColor.RED + "voted to let night continue";
-            Bukkit.broadcastMessage(ChatColor.YELLOW + Bukkit.getPlayer(uuid).getName() + " " + voteMessage);
+            Bukkit.broadcast(ChatColor.YELLOW + Bukkit.getPlayer(uuid).getName() + " " + voteMessage, "nightskip.spy");
 
             int onlinePlayersCount = Bukkit.getOnlinePlayers().size();
             if (votes.size() >= onlinePlayersCount) {
