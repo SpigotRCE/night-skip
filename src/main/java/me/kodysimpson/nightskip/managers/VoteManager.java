@@ -90,6 +90,11 @@ public class VoteManager {
         }
 
         boolean keepDay = votesForDay > votesForNight;
+
+        Bukkit.getServer().getOnlinePlayers().forEach(player -> {
+            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0F, 1.0F);
+        });
+
         // Create a fancy border
         String border = ChatColor.GOLD + "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
