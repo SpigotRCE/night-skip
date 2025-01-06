@@ -7,6 +7,7 @@ import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.chat.hover.content.Text;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -47,6 +48,8 @@ public class VoteManager {
         // Send the complete message to all players
         Bukkit.getOnlinePlayers().forEach(player -> {
             player.spigot().sendMessage(message, yesButton, noButton);
+            player.sendTitle(ChatColor.GOLD + "Voting", ChatColor.GOLD + "Night skip???", 25, 40, 25);
+            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0F, 1.0F);
         });
 
         this.voteTask = Bukkit.getScheduler().runTaskLater(plugin, this::processVoteResults, 600L);
