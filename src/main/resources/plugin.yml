@@ -1,0 +1,9 @@
+name: nightskip
+version: '1.0'
+main: me.kodysimpson.nightskip.Nightskip
+api-version: '1.21'
+commands:
+  vote:
+    description: Vote to keep it day or let night continue
+    usage: /<command> <yes|no>
+    aliases: [v]
