@@ -54,6 +54,10 @@ public class VoteManager {
 
     public void castVote(UUID uuid, boolean vote) {
         if (isVoteActive()) {
+            if (votes.containsKey(uuid)) {
+                Bukkit.getPlayer(uuid).sendMessage(ChatColor.YELLOW + "You have already casted your vote!");
+                return;
+            }
             votes.put(uuid, vote);
             String voteMessage = vote ? ChatColor.GREEN + "voted to keep it day" : ChatColor.RED + "voted to let night continue";
             Bukkit.broadcast(ChatColor.YELLOW + Bukkit.getPlayer(uuid).getName() + " " + voteMessage, "nightskip.spy");
